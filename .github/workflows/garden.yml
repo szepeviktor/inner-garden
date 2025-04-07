@@ -1,0 +1,13 @@
+on:
+  push:
+
+jobs:
+  garden:
+    runs-on: ubuntu-22.04
+    steps:
+    -
+      env:
+        garden:
+          key1: value1
+          key2: value2
+      run: echo ${{ toJSON(env) }}
