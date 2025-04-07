@@ -10,4 +10,7 @@ jobs:
     -
       env:
         key2: value2
-      run: echo ${{ toJSON(env) }}
+      run: |
+        cat << "EOF"
+        ${{ toJSON(env) }}
+        EOF
